@@ -1,6 +1,7 @@
 require './lib/node'
 class LinkedList
   attr_reader :head
+
   def initialize
     @head = nil
   end
@@ -10,8 +11,13 @@ class LinkedList
   end
 
   def count
-    @head.size
+    count = 1
+    while @head.next_node !=nil
+      count += 1
+    end
+    count
   end
+
 
 
 end
