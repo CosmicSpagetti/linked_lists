@@ -33,4 +33,19 @@ class LinkedListTest < Minitest::Test
 
     assert_equal 1, list.count
   end
+
+  def test_can_generate_string_of_familys
+    list = LinkedList.new
+    list.append("West")
+
+    assert_equal "The West family", list.to_string
+  end
+
+  def test_changing_append_for_adding_several_to_head
+    list = LinkedList.new
+    list.append("Rhodes")
+    list.append("Hardy")
+
+    assert_equal 2, list.count
+  end
 end
